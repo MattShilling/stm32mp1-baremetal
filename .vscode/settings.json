@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "stm32mp1xx.h": "c",
-        "irq_ctrl.h": "c",
-        "stddef.h": "c",
-        "cstdint": "cpp",
-        "cstddef": "cpp"
-    }
-}
