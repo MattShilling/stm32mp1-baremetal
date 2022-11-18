@@ -10,7 +10,7 @@ set(TOOLCHAIN_LIB_DIR ${TOOLCHAIN_PREFIX}/${TOOLCHAIN}/lib)
 # Perform compiler test with static library
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
-set(OBJECT_GEN_FLAGS "-O0 \
+set(OBJECT_GEN_FLAGS "-Os \
 -mthumb \
 -fno-builtin \
 -Wall \
@@ -21,6 +21,11 @@ set(OBJECT_GEN_FLAGS "-O0 \
 
 
 set(CMAKE_C_FLAGS "${OBJECT_GEN_FLAGS} \
+-DUSE_HAL_DRIVER \
+-DUSE_FULL_LL_DRIVER \
+-DSTM32MP157Cxx \
+-DSTM32MP1 \
+-DCORE_CA7 \
 -g2 \
 -fno-common \
 -mfpu=neon-vfpv4 \

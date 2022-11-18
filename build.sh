@@ -18,7 +18,7 @@ cmake \
     -G Ninja
 
 # Format.
-clang-format-12 shared/**/*.h shared/**/*.cc -i
+clang-format-12 ./**/*.h ./**/*.cc -i
 
 # Build.
 cd ${BUILD_PATH} && ninja
