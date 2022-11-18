@@ -1,4 +1,4 @@
-add_library(codec-CS43L51 codec_CS42L51.cc)
+add_subdirectory(codec)
 
 # add_library(cycle-counter cycle_counter.cc)
 
