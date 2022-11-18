@@ -1,5 +1,5 @@
 #pragma once
-#include "pin.hh"
+#include "drivers/pin.hh"
 
 namespace mdrivlib
 {

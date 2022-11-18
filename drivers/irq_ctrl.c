@@ -25,9 +25,11 @@
  * limitations under the License.
  */
 
-#include "CMSIS/Core_A/Include/irq_ctrl.h"
-#include "drivers/stm32xx.h"
+#include "irq_ctrl.h"
+
 #include <stddef.h>
+
+#include "stm32mp1xx.h"
 
 #if defined(__GIC_PRESENT) && (__GIC_PRESENT == 1U)
 /// Number of implemented interrupt lines

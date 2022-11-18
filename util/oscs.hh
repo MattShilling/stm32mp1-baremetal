@@ -1,5 +1,8 @@
 #pragma once
+
 #include <cstdint>
+
+#include <util/math/math_tables.hh>
 
 // template<int UpdateRateHz>
 // struct ProtoOscillator {
@@ -142,8 +145,6 @@ private:
 
 template<int UpdateRateHz>
 using RampOscillator = PhaseAccum<UpdateRateHz>;
-
-#include <util/math_tables.hh>
 
 template<int UpdateRateHz>
 struct SineOscillator {

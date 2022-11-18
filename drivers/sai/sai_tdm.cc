@@ -1,9 +1,9 @@
-#include "sai_tdm.hh"
-#include "clocks.hh"
-#include "interrupt.hh"
-#include "interrupt_control.hh"
-#include "stm32xx.h"
-#include "system.hh"
+#include "drivers/sai/sai_tdm.hh"
+#include "drivers/clocks.hh"
+#include "drivers/interrupt/interrupt.hh"
+#include "drivers/interrupt/interrupt_control.hh"
+#include "drivers/system.hh"
+#include "stm32mp1xx.h"
 
 namespace mdrivlib
 {

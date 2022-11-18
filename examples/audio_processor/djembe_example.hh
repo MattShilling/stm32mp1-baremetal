@@ -1,8 +1,8 @@
 #pragma once
-#include "lib/CoreModules/djembeCore.h"
+#include "CoreModules/djembeCore.h"
 #include "util/countzip.hh"
-#include "util/math.hh"
-#include "util/math_tables.hh"
+#include "util/math/math.hh"
+#include "util/math/math_tables.hh"
 #include "util/oscs.hh"
 #include <array>
 

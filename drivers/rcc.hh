@@ -1,9 +1,10 @@
 #pragma once
 
+#include <variant>
+
 #include "rcc_common.hh"
 #include "register_access.hh"
-#include "drivers/stm32xx.h"
-#include <variant>
+#include "stm32mp1xx.h"
 
 namespace mdrivlib
 {

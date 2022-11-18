@@ -1,7 +1,7 @@
 #pragma once
 #include "gcem.hpp"
-#include "util/math.hh"
-#include "util/math_tables.hh"
+#include "util/math/math.hh"
+#include "util/math/math_tables.hh"
 using namespace MathTools;
 
 template<uint32_t SAMPLERATE = 48000>

@@ -1,4 +1,5 @@
-#include "cycle_counter.hh"
+#include "drivers/cycle_counter.hh"
+#include "stm32mp1xx.h"
 
 namespace mdrivlib
 {

@@ -11,13 +11,17 @@ set(TOOLCHAIN_LIB_DIR ${TOOLCHAIN_PREFIX}/${TOOLCHAIN}/lib)
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 set(OBJECT_GEN_FLAGS "-Os \
--mthumb \
 -fno-builtin \
 -Wall \
 -ffunction-sections \
 -fdata-sections \
 -fomit-frame-pointer \
--mabi=aapcs")
+-mthumb \
+-mfpu=neon-vfpv4 \
+-mfloat-abi=hard \
+-march=armv7ve \
+-mcpu=cortex-a7 \
+-mtune=cortex-a7")
 
 
 set(CMAKE_C_FLAGS "${OBJECT_GEN_FLAGS} \
@@ -28,17 +32,13 @@ set(CMAKE_C_FLAGS "${OBJECT_GEN_FLAGS} \
 -DCORE_CA7 \
 -g2 \
 -fno-common \
--mfpu=neon-vfpv4 \
--mfloat-abi=hard \
--mthumb-interwork \
--mtune=cortex-a7 \
 -mno-unaligned-access \
 -funsafe-math-optimizations \
 -mvectorize-with-neon-quad \
--mcpu=cortex-a7 -march=armv7ve -mfpu=neon-vfpv4 -mlittle-endian -mfloat-abi=hard \
+-mlittle-endian \
 -fdata-sections -ffunction-sections \
 -nostartfiles \
--ffreestanding " 
+-ffreestanding" 
 CACHE INTERNAL "C Compiler options")
 
 
@@ -56,7 +56,7 @@ set(CMAKE_CXX_FLAGS "${OBJECT_GEN_FLAGS} ${CMAKE_C_FLAGS} \
 -Wno-volatile"
 CACHE INTERNAL "C++ Compiler options")
 
-set(CMAKE_ASM_FLAGS "${OBJECT_GEN_FLAGS} -x assembler-with-cpp " CACHE INTERNAL "ASM Compiler options")
+set(CMAKE_ASM_FLAGS "${OBJECT_GEN_FLAGS}" CACHE INTERNAL "ASM Compiler options")
 
 
 #---------------------------------------------------------------------------------------
@@ -64,7 +64,7 @@ set(CMAKE_ASM_FLAGS "${OBJECT_GEN_FLAGS} -x assembler-with-cpp " CACHE INTERNAL 
 #---------------------------------------------------------------------------------------
 set(CMAKE_C_COMPILER ${TOOLCHAIN_BIN_DIR}/${TOOLCHAIN}-gcc CACHE INTERNAL "C Compiler")
 set(CMAKE_CXX_COMPILER ${TOOLCHAIN_BIN_DIR}/${TOOLCHAIN}-g++ CACHE INTERNAL "C++ Compiler")
-set(CMAKE_ASM_COMPILER ${TOOLCHAIN_BIN_DIR}/${TOOLCHAIN}-gcc CACHE INTERNAL "ASM Compiler")
+set(CMAKE_ASM_COMPILER ${TOOLCHAIN_BIN_DIR}/${TOOLCHAIN}-as CACHE INTERNAL "ASM Compiler")
 
 set(CMAKE_FIND_ROOT_PATH ${TOOLCHAIN_PREFIX}/${${TOOLCHAIN}} ${CMAKE_PREFIX_PATH})
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)

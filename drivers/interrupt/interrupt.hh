@@ -1,13 +1,13 @@
 #pragma once
 
-#include "stm32xx.h"
+#include "stm32mp1xx.h"
 using IRQType = IRQn_Type;
 
 // FixMe: how to get around this ugly PP stuff?
 #ifdef TESTPROJECT
 #include "stubs/system.hh"
 #else
-#include "interrupt_control.hh"
+#include "drivers/interrupt/interrupt_control.hh"
 #endif
 
 #include <functional>

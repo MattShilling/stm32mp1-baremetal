@@ -1,6 +1,6 @@
 #pragma once
 
-#include "i2c_simple.hh"
+#include "drivers/i2c/i2c_simple.hh"
 
 class STPMIC1 {
 

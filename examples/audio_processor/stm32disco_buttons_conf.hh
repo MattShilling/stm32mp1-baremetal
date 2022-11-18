@@ -1,5 +1,5 @@
 #pragma once
-#include "drv/debounced_switch.hh"
+#include "drivers/debounced_switch.hh"
 
 namespace STM32MP1Disco
 {

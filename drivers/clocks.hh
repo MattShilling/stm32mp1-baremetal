@@ -1,7 +1,7 @@
 #pragma once
-#include "periph.hh"
+#include "drivers/periph.hh"
 #include "rcc.hh"
-#include "stm32xx.h"
+#include "stm32mp1xx.h"
 
 #ifndef BDMA
 #undef HAS_BDMA

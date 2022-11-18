@@ -1,6 +1,6 @@
 #pragma once
 
-#include "drivers/stm32xx.h"
+#include "stm32mp1xx.h"
 
 RCC_PeriphCLKInitTypeDef rcc_periph_clk_conf = {
 	.PeriphClockSelection = RCC_PERIPHCLK_I2C12 | RCC_PERIPHCLK_SAI2,

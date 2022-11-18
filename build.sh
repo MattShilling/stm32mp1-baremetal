@@ -8,7 +8,7 @@ set -e -x
 BUILD_PATH="build/"
 TOOLCHAIN_FILE="toolchain-arm-none-eabi.cmake"
 
-BUILD_TARGET=mipi_dsi_lcd
+BUILD_TARGET=audio_processor
 
 # Initialize build.
 cmake \
@@ -22,3 +22,6 @@ clang-format-12 ./**/*.h ./**/*.cc -i
 
 # Build.
 cd ${BUILD_PATH} && ninja
+
+# -DCMAKE_CXX_CPPLINT=cpplint \
+# -DCMAKE_CXX_CPPCHECK=cppcheck \

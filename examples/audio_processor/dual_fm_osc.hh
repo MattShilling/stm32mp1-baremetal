@@ -1,6 +1,6 @@
 #pragma once
-#include "util/math.hh"
-#include "util/math_tables.hh"
+#include "util/math/math.hh"
+#include "util/math/math_tables.hh"
 #include "util/oscs.hh"
 
 template<typename AudioStreamConf>

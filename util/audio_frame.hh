@@ -1,8 +1,10 @@
 #pragma once
-#include "math.hh"
+
 #include <array>
 #include <cstdint>
 #include <type_traits>
+
+#include "util/math/math.hh"
 
 template<typename SampleType, int UsedBits = sizeof(SampleType) * 8, int NumChannels = 2>
 struct AudioFrame {
