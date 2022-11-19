@@ -1,0 +1,1 @@
+add_library(drivers-pin pin.cc)

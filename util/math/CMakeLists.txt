@@ -1,0 +1,1 @@
+add_library(math-tables math_tables.cc)

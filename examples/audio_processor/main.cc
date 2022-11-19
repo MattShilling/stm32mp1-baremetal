@@ -1,7 +1,7 @@
 #include "audio_stream.hh"
 #include "drivers/uart.hh"
-#include "drv/pmic.hh"
-#include "register_access.hh"
+#include "drivers/pmic.hh"
+#include "drivers/register_access.hh"
 #include "stm32disco_buttons_conf.hh"
 #include "stm32mp1xx.h"
 
