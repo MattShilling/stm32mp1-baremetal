@@ -1,7 +1,7 @@
 #pragma once
 #include "drivers/i2c/i2c_config_struct.hh"
 #include "drivers/interrupt/interrupt.hh"
-#include "drivers/pin.hh"
+#include "drivers/pin/pin.hh"
 #include <stdint.h>
 
 namespace mdrivlib

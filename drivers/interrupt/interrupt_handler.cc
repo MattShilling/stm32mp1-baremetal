@@ -15,7 +15,7 @@ void __attribute__((naked)) __attribute__((section(".irqhandler"))) IRQ_Handler(
 {
 	// To fix: https://stackoverflow.com/questions/20071466/aligning-a-stack-pointer-8-byte-from-4-byte-in-arm-assembly
 	asm volatile(
-		".equ MODE_SVC, 0x13  			\n"
+		"   			\n"
 		".equ MODE_SYS, 0x1F  			\n"
 		".equ GICCPU_BASE_low, 0x2000 	\n"
 		".equ GICCPU_BASE_high, 0xA002 	\n"
@@ -25,8 +25,11 @@ void __attribute__((naked)) __attribute__((section(".irqhandler"))) IRQ_Handler(
 		"cps MODE_SYS 		 			\n" // Switch to system mode
 		"push {r0-r3, r12, lr} 			\n" // Store remaining AAPCS registers on the System mode stack:
 											// these are expected to be clobbered by the bl ISRHandler call
-		"and r3, sp, #4  	 			\n" // Ensure stack is 8-byte aligned.
-		"sub sp, sp, r3  				\n" //
+		"mov r2, sp  	 			    \n" // Ensure stack is 8-byte aligned.
+		"and r3, r2, #4  	 			\n" // Thumb mode workaround.
+		"sub sp, sp, r3  	 			\n" // 
+		//"and r3, sp, #4  	 			\n" // 
+		//"sub sp, sp, r3  				\n" //
 		"push {r3}  					\n" // Store adjustment to stack
 
 		//////////FPU

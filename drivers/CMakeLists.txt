@@ -2,6 +2,7 @@ add_subdirectory(codec)
 add_subdirectory(i2c)
 add_subdirectory(sai)
 add_subdirectory(interrupt)
+add_subdirectory(pin)
 
 add_library(drivers-cycle-counter cycle_counter.cc)
 

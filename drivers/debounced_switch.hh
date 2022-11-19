@@ -1,5 +1,5 @@
 #pragma once
-#include "pin.hh"
+#include "drivers/pin/pin.hh"
 #include "util/debouncer.hh"
 #include <cstdint>
 

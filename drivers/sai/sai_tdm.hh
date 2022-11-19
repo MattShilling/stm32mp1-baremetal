@@ -1,6 +1,6 @@
 #pragma once
 #include "drivers/interrupt/interrupt.hh"
-#include "drivers/pin.hh"
+#include "drivers/pin/pin.hh"
 #include "drivers/sai/sai_config_struct.hh"
 #include "stm32mp1xx_hal_sai.h"
 #include <cstdint>

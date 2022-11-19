@@ -1,6 +1,6 @@
 #pragma once
 #include "drivers/dma_config_struct.hh"
-#include "drivers/pin.hh"
+#include "drivers/pin/pin.hh"
 #include "stm32mp1xx.h"
 
 namespace mdrivlib
